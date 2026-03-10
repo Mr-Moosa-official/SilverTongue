@@ -1,4 +1,4 @@
-# 🥈 Silver Tongue App Blueprint
+# 🥈 Silver  Tongue App Blueprint
 
 A modern Question & Answer knowledge-sharing platform designed to help users ask questions, contribute meaningful answers, and quickly extract insights using AI-powered summarization — all within a clean, elegant UI.
 
