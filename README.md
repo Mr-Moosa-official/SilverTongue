@@ -8,7 +8,7 @@ Silver Tongue enables structured knowledge exchange by combining community-drive
 
 Users can:
 
-Post questions on various topics
+Post  questions on various topics
 
 Submit detailed answers
 
