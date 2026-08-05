@@ -1,14 +1,18 @@
+import Image from 'next/image';
 import Link from 'next/link';
-import { Pencil } from 'lucide-react';
+import { ExternalLink, Github, Pencil } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { NewQuestionDialog } from './new-question-dialog';
+
+const LIVE_LINK = 'https://silver-tongue-topaz.vercel.app';
+const GITHUB_LINK = 'https://github.com/Mr-Moosa-official/SilverTongue';
 
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur-sm">
-      <div className="container flex h-16 items-center">
-        <div className="mr-4 hidden md:flex">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
+      <div className="container flex h-16 items-center gap-3">
+        <div className="mr-4 hidden md:flex md:items-center md:gap-3">
+          <Link href="/" className="flex items-center space-x-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 256 256"
@@ -21,6 +25,33 @@ export function SiteHeader() {
               SilverTongue
             </span>
           </Link>
+
+          <a
+            href={LIVE_LINK}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1 rounded-full border border-border/60 bg-muted/30 px-3 py-1 text-xs font-medium text-foreground transition-colors hover:bg-muted"
+          >
+            <ExternalLink className="h-3.5 w-3.5" />
+            Live Link
+          </a>
+
+          <a
+            href={GITHUB_LINK}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Open the SilverTongue GitHub repository"
+            className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-background px-2 py-1.5 transition-colors hover:bg-muted"
+          >
+            <Image
+              src="/mr-moosa-official-monogram.png"
+              alt="Mr Moosa Official Monogram"
+              width={28}
+              height={28}
+              className="h-7 w-7 rounded-full object-cover"
+            />
+            <Github className="h-3.5 w-3.5" />
+          </a>
         </div>
         <div className="flex flex-1 items-center justify-end space-x-2">
           <NewQuestionDialog>
